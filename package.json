@@ -1,12 +1,12 @@
 {
   "name": "chest-backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "Backend for the Chest platform.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "MayusYT, Tallerik",
   "license": "MIT"
 }
