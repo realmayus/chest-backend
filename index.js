@@ -1,10 +1,10 @@
-var http = require("http");
+const http = require("http");
 
 
-var error = {"requestOK": false, "error": "Not specified!"};
+const error = {"requestOK": false, "error": "Not specified!"};
 
 function handleReq(req) {
-    var answer;
+    let answer;
     if(req.url.startsWith("/chest")) {
         answer = {"requestOK": true, data: "Chest is the answer!"}
     } else {
@@ -16,7 +16,7 @@ function handleReq(req) {
 
 http.createServer(function (request, response) {
     console.log("Request mit URL: " + request.url);
-    responsejson = handleReq(request);
+    let responsejson = handleReq(request);
     response.writeHead(200, {'Content-Type': 'application/json'});
     response.write(JSON.stringify(responsejson));
     response.end();
